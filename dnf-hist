@@ -1,0 +1,34 @@
+ID     | Command line                                                                                                            | Date and time    | Action(s)      | Altered
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    32 | install xorg-x11-server-Xwayland-24.1.0-2.fc40.x86_64                                                                   | 2024-06-28 22:52 | Upgrade        |    1
+    31 | install hyprland xdg-desktop-portal-hyprland qt5-qtwayland qt6-qtwayland qt5ct qt6ct libva kernel-devel                 | 2024-06-28 22:50 | Install        |   35
+    30 | remove git-delta-0.17.0-1.fc40.x86_64                                                                                   | 2024-06-28 22:24 | Removed        |    1
+    29 | install diff-so-fancy                                                                                                   | 2024-06-28 22:20 | Install        |    1
+    28 | install xset                                                                                                            | 2024-06-28 22:13 | Install        |    1
+    27 | install git-delta                                                                                                       | 2024-06-28 22:08 | Install        |    1
+    26 | install lsd                                                                                                             | 2024-06-28 22:06 | Install        |    1
+    25 | remove eza                                                                                                              | 2024-06-28 22:06 | Removed        |    1
+    24 | install fd-find eza                                                                                                     | 2024-06-28 22:03 | Install        |    1
+    23 | install fd-find ripgrep                                                                                                 | 2024-06-28 22:02 | Install        |    1
+    22 | remove fzf                                                                                                              | 2024-06-28 19:59 | Removed        |    1
+    21 | install zoxide bat                                                                                                      | 2024-06-28 19:57 | Install        |    2
+    20 | install fzf                                                                                                             | 2024-06-28 19:44 | Install        |    1
+    19 | install zsh                                                                                                             | 2024-06-28 19:18 | Install        |    1
+    18 | update                                                                                                                  | 2024-06-28 19:10 | Upgrade        |   46
+    17 | install xev                                                                                                             | 2024-06-28 14:33 | Install        |    1
+    16 | install gh                                                                                                              | 2024-06-22 18:07 | Install        |    1
+    15 | install lazygit                                                                                                         | 2024-06-22 17:54 | Install        |    1  <
+    14 | install rofi                                                                                                            | 2024-06-22 17:06 | Install        |    2 >
+    13 | install feh                                                                                                             | 2024-06-22 17:04 | Install        |    3
+    12 | install polybar                                                                                                         | 2024-06-22 16:49 | Install        |    3
+    11 | install stow                                                                                                            | 2024-06-22 16:43 | Install        |    2
+    10 | install picom                                                                                                           | 2024-06-22 16:43 | Install        |    1
+     9 |                                                                                                                         | 2024-06-22 16:26 | Install        |   23
+     8 | remove rxvt-unicode-9.31-7.fc40.x86_64                                                                                  | 2024-06-22 16:20 | Removed        |    2
+     7 | remove gnome-terminal                                                                                                   | 2024-06-22 16:18 | Removed        |    2
+     6 | install alacritty                                                                                                       | 2024-06-22 16:08 | Install        |    1
+     5 | install i3                                                                                                              | 2024-06-22 15:59 | Install        |   33
+     4 | install gcc                                                                                                             | 2024-06-22 15:16 | Install        |    7
+     3 | install ./code-1.90.2-1718751675.el8.x86_64.rpm                                                                         | 2024-06-22 15:14 | Install        |    1
+     2 |                                                                                                                         | 2024-06-22 15:02 | E, I, U        |  717  <
+     1 |                                                                                                                         | 2024-04-15 01:56 | Install        | 1952 >E
