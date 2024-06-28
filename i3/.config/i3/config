@@ -13,6 +13,7 @@ set $mod Mod4
 
 exec --no-startup-id picom
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
+exec_always xmodmap -e 'keycode 63='
 
 bindsym Print exec maim "/home/$USER/Pictures/$(date).jpg"
 bindsym $mod+Print exec maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date).jpg"
