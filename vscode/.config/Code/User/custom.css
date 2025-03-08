@@ -94,7 +94,6 @@
 
 li.action-item.icon.checked, li.action-item.icon:hover {
     opacity: 1;
-    color: #89b4fa;
 }
 
 li.action-item.icon {
@@ -114,8 +113,9 @@ li.action-item.icon {
     border-radius: .5rem;
 }
 
+/* height of line underneath checked panel item */
 .monaco-workbench .pane-composite-part>.header-or-footer>.composite-bar-container>.composite-bar>.monaco-action-bar .action-item.checked .active-item-indicator:before, .monaco-workbench .pane-composite-part>.header-or-footer>.composite-bar-container>.composite-bar>.monaco-action-bar .action-item:focus .active-item-indicator:before, .monaco-workbench .pane-composite-part>.title>.composite-bar-container>.composite-bar>.monaco-action-bar .action-item.checked .active-item-indicator:before, .monaco-workbench .pane-composite-part>.title>.composite-bar-container>.composite-bar>.monaco-action-bar .action-item:focus .active-item-indicator:before {
-    border-top-width:1px;   
+    border-top-width:1px;
 }
 
 .terminal-wrapper.active {
@@ -144,19 +144,33 @@ div#terminal {
 }
 
 [id='workbench.parts.panel'] .composite.panel .split-view-view.visible {
-    background: #1E1E2E !important;
-    border-radius: .75rem !important;
-    overflow: hidden !important;
+    background: #1E1E2E;
+    border-radius: .75rem;
+    overflow: hidden;
 }
 
 [id='workbench.parts.panel'] .composite.panel .split-view-view.visible .monaco-list-rows {
-    background: #1E1E2E !important;
+    background: #1E1E2E;
 }
 
 [id='workbench.parts.panel'] .composite.panel .split-view-view.visible .view-line {
-    background: #1E1E2E !important;
+    background: #1E1E2E;
 }
- 
+
+[id='workbench.parts.panel'] .composite-bar li.action-item.checked {
+    background: #1E1E2E;
+    border-radius: 0.5rem 0.5rem 0px 0px;
+    position: relative;
+}
+
+[id='workbench.parts.panel'] > .composite.title.has-composite-bar {
+    padding-left: 0px;
+}
+
+[id='workbench.parts.panel'] > .composite.title.has-composite-bar:has(.action-item.checked:first-child) {
+    box-shadow: -20px 20px 0 0 #1E1E2E;
+}
+
 .quick-input-widget {
     width: 60% !important;
     left: 20% !important;
