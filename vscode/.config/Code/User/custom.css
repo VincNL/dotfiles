@@ -52,6 +52,7 @@
 
 .monaco-split-view2.separator-border>.monaco-scrollable-element>.split-view-container>.split-view-view:not(:first-child):before {
     background: #181825 !important;
+    width: 10px;
 }
 
 .monaco-workbench .part.titlebar>.titlebar-container>.titlebar-center>.window-title>.command-center .action-item.command-center-center {
@@ -69,8 +70,31 @@
     pointer-events: all;
 }
 
+.sidebar ul[role=tablist] .action-item {
+    width: 32px;
+    padding: 0px !important; 
+    height: 32px !important; 
+    display: flex !important; 
+    align-items: center !important; 
+    justify-content: center; 
+    border-radius: 8px;
+}
+.sidebar ul[role=tablist] .action-item.checked {
+    background-color: #ffffff12 !important; 
+    box-shadow:inset 0 1px 0 #ffffff09 !important; 
+    border-radius: 4px;
+    outline: 1px solid #00000020 !important;
+}
+.sidebar ul[role=tablist] .action-label:before {
+    left:auto !important;
+}
+.sidebar ul[role=tablist] .active-item-indicator {
+    display:none !important;
+}
+
 li.action-item.icon.checked, li.action-item.icon:hover {
     opacity: 1;
+    color: #89b4fa;
 }
 
 li.action-item.icon {
@@ -95,7 +119,7 @@ li.action-item.icon {
 }
 
 .terminal-wrapper.active {
-    background: #181825;
+    background: #1E1E2E;
 }
 
 div#terminal {
@@ -108,8 +132,31 @@ div#terminal {
     overflow: hidden;
 }
 
+.monaco-workbench .part.panel {
+    background:#181825 !important; 
+    /* margin:0 10px 0 10px !important;  */
+    /* height: calc(100%-10px) !important; */
+    overflow: hidden;
+    border-radius: 0.5rem !important; 
+    display:flex !important; 
+    flex-direction:column !important; 
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
+}
 
+[id='workbench.parts.panel'] .composite.panel .split-view-view.visible {
+    background: #1E1E2E !important;
+    border-radius: .75rem !important;
+    overflow: hidden !important;
+}
 
+[id='workbench.parts.panel'] .composite.panel .split-view-view.visible .monaco-list-rows {
+    background: #1E1E2E !important;
+}
+
+[id='workbench.parts.panel'] .composite.panel .split-view-view.visible .view-line {
+    background: #1E1E2E !important;
+}
+ 
 .quick-input-widget {
     width: 60% !important;
     left: 20% !important;
