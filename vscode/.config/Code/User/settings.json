@@ -10,8 +10,9 @@
     },
     "workbench.editor.editorActionsLocation": "default",
     "workbench.activityBar.location": "top",
+    "workbench.sideBar.location": "right",
     "update.showReleaseNotes": false,
-    "window.titleBarStyle": "custom",
+    "window.titleBarStyle": "native",
     "window.commandCenter": false,
     "vscode_custom_css.imports": [
         "file://${userHome}/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js",
@@ -105,7 +106,7 @@
     "window.menuBarVisibility": "toggle",
     "window.dialogStyle": "custom",
     "window.experimentalControlOverlay": false,
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 1.5,
     "window.restoreWindows": "none",
     "files.hotExit": "off",
     "editor.tabSize": 4,
@@ -113,7 +114,8 @@
     "workbench.tree.indent": 12,
     "workbench.tree.renderIndentGuides": "none",
     "workbench.editor.tabActionCloseVisibility": false,
-    "editor.padding.top": 10,
+    "editor.padding.top": 14,
+    "editor.padding.bottom": 14,
     // "editor.codeLens": false,
     "editor.foldingHighlight": false,
     "editor.renderLineHighlight": "gutter",
@@ -127,6 +129,7 @@
     "editor.smoothScrolling": true,
     "editor.semanticHighlighting.enabled": true,
     "window.autoDetectHighContrast": false,
+    "editor.lineHeight": 24,
     // "editor.inlayHints.enabled": "off"
     // "explorer.openEditors.visible": 1
     // "explorer.autoReveal": "focusNoScroll"
@@ -138,5 +141,12 @@
     "animations.Scrolling": "Fade",
     "window.customTitleBarVisibility": "never",
     "terminal.integrated.tabs.enabled": false,
+    // "terminal.integrated.fontFamily": "Fira Code",
+    
+    "editor.fontLigatures": true,
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 5,
+    "workbench.editor.limit.excludeDirty": true,
+    "explorer.autoReveal": "focusNoScroll",
     // "explorer.sortOrder": "type",
 }
