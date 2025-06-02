@@ -55,6 +55,14 @@
     width: 10px;
 }
 
+.monaco-scrollable-element>.split-view-container .editor-container .overflow-guard .overlayWidgets .editor-widget.find-widget.visible > div.monaco-sash.vertical {
+    background-color: #74aeec !important;
+}
+
+.monaco-workbench .part.editor>.content .sash-container > .monaco-sash.vertical:not(.disabled) {
+    background-color: #181825 !important;
+}
+
 .monaco-workbench .part.titlebar>.titlebar-container>.titlebar-center>.window-title>.command-center .action-item.command-center-center {
     border-radius: 5rem;
     border: none;
@@ -178,7 +186,7 @@ div#terminal {
     padding: 15px !important;
     background-color: #181825 !important;
     border-radius: 10px !important;
-    border: 1px solid #007ACC !important;
+    border: 1px solid #74aeec !important;
 }
 
 .quick-input-widget .quick-input-header {
