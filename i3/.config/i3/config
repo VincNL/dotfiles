@@ -15,8 +15,9 @@ mouse_warping none
 
 exec --no-startup-id picom
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
-exec_always xmodmap -e 'keycode 63='
-exec_always xset b off
+
+# turn buzzer sound off
+exec xset b off
 
 exec_always --no-startup-id feh --bg-scale ~/Pictures/nice-blue-background.png
 
