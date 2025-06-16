@@ -1,7 +1,7 @@
 {
     "workbench.colorTheme": "Catppuccin Mocha",
     "workbench.iconTheme": "catppuccin-mocha",
-    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'Symbols Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace",
     "notebook.lineNumbers": "on",
     "lazygit-vscode.autoMaximizeWindow": true,
     "lazygit-vscode.panels": {
@@ -148,5 +148,7 @@
     "workbench.editor.limit.value": 5,
     "workbench.editor.limit.excludeDirty": true,
     "explorer.autoReveal": "focusNoScroll",
+    "update.mode": "none",
+    "window.title": "${dirty}${rootName}${separator}${activeEditorShort}${separator}${appName}"
     // "explorer.sortOrder": "type",
 }
