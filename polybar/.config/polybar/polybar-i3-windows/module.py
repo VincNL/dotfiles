@@ -5,36 +5,36 @@ import asyncio
 import getpass
 import i3ipc
 import platform
-from time import sleep
 
 from icon_resolver import IconResolver
 
 #: Max length of single window title
-MAX_LENGTH = 48
+MAX_LENGTH = 30
 #: Base 1 index of the font that should be used for icons
-ICON_FONT = 3
+ICON_FONT = 1
 
 HOSTNAME = platform.node()
 USER = getpass.getuser()
 
 ICONS = [
-    ('class=*.slack.com', '\uf3ef'),
-
-    ('class=Google-chrome', '\ue743'),
-    ('class=Firefox', '\uf738'),
-    ('class=St', '\ue795'),
-    ('class=Code', '\ue70c'),
-    ('class=code-oss-dev', '\ue70c'),
-
-    ('name=mutt', '\uf199'),
-
-    ('*', ''),
+    ('class=org.mozilla.firefox', ''),
+    ('class=firefox', ''),
+    ('class=Code', ''),
+    ('class=code-oss-dev', ''),
+    ('class=Alacritty', ''),
+    ('class=ter', '󰑕'),
+    ('class=lzgit', ''),
+    ('*', ''),
 ]
 
 FORMATERS = {
     'Google-chrome': lambda title: title.replace(' - Google Chrome', ''),
-    'Firefox': lambda title: title.replace(' - Mozilla Firefox', ''),
-    'URxvt': lambda title: title.replace('%s@%s: ' % (USER, HOSTNAME), ''),
+    'org.mozilla.firefox': lambda title: title.replace(' — Mozilla Firefox', ''),
+    'firefox': lambda title: title.replace(' — Mozilla Firefox', ''),
+    'Alacritty': lambda title: title.replace(f'{USER}@{HOSTNAME}:', ''),
+    'ter': lambda title: title.replace(f'{USER}@{HOSTNAME}:', ''),
+    'Code': lambda title: title.replace(' - Visual Studio Code', ''),
+    'lzgit': lambda title: 'lazygit',
 }
 
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
@@ -86,14 +86,14 @@ def render_apps(i3):
 
     apps = [app for app in get_apps(i3) if app.name is not None]
 
-    out = '%{O12}|%{O12}'.join(format_entry(app) for app in apps)
+    out = '%{O12}%{F#89b4fa}|%{O12}%{F-}'.join(format_entry(app) for app in apps)
 
     print(out, flush=True)
 
 
 def format_entry(app):
     title =  make_title(app)
-    u_color = '#b4619a' if app.focused else '#e84f4f' if app.urgent else None
+    u_color = '#89b4fa' if app.focused else '#e84f4f' if app.urgent else None
     if u_color:
         return F'%{{U{u_color}}}%{{+u}} {title} %{{-u}}'
     else:
@@ -104,9 +104,9 @@ def make_title(app):
     out = get_prefix(app) + format_title(app)
 
     if app.focused:
-        out = '%{F#fff}' + out + '%{F-}'
+        out = '%{F#89b4fa}' + out + '%{F-}'
 
-    return f'%{{A1:{COMMAND_PATH} {app.id} focus:}}%{{A3:{COMMAND_PATH} {app.id} kill:}}{out}%{{A}}%{{A}}'
+    return f'%{{A1:{COMMAND_PATH} {app.id} focus:}}%{{A2:{COMMAND_PATH} {app.id} kill:}}{out}%{{A}}%{{A}}'
 
 
 def get_prefix(app):
@@ -114,9 +114,7 @@ def get_prefix(app):
         'class': app.window_class,
         'name': app.name,
     })
-    return icon + ' '
-
-    #return ('%%{T%s}%s%%{T-}' % (ICON_FONT, icon))
+    return f'%{{T{ICON_FONT}}}{icon} %{{T-}}'
 
 
 def format_title(app):
