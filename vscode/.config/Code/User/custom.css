@@ -1,6 +1,5 @@
 /* "(.*)": "(.*)", */
 /* $1 { $2; } */
-.title-label > h2 { display: none; }
 
 .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab {
     border-radius: 0.5rem 0.5rem 0 0;
@@ -14,7 +13,7 @@
     border-radius: 0.5rem 0.5rem 0 0;
     overflow: hidden;
     padding: 9px 0;
-    background: #1E1E2E;
+    background: var(--vscode-editor-background);
 }
 
 .monaco-breadcrumbs {
@@ -30,11 +29,11 @@
 }
 
 .monaco-editor .sticky-widget {
-    border-color: #181825;
+    border-color: var(--vscode-textCodeBlock-background);
 }
 
 .monaco-workbench .part.editor>.content .editor-group-container.active>.title .tabs-container>.tab.active {
-    box-shadow: 0 6px 0 0 #181825;
+    box-shadow: 0 6px 0 0 var(--vscode-textCodeBlock-background);
 }
 
 .tabs-and-actions-container > div.editor-actions {
@@ -47,7 +46,7 @@
 }
 
 .tabs-and-actions-container:has(.tab.active:first-child){
-    box-shadow: -20px 5px 0 0 #1E1E2E;
+    box-shadow: -20px 5px 0 0 var(--vscode-editor-background);
 }
 
 .editor-group-container {
@@ -56,24 +55,24 @@
 }
 
 .split-view-view.visible {
-    background: #181825;
+    background: var(--vscode-textCodeBlock-background);
 }
 
 .monaco-split-view2.separator-border.vertical>.monaco-scrollable-element>.split-view-container>.split-view-view:not(:first-child):before {
-    background: #181825 !important;
+    background: var(--vscode-textCodeBlock-background) !important;
 }
 
 .monaco-split-view2.separator-border>.monaco-scrollable-element>.split-view-container>.split-view-view:not(:first-child):before {
-    background: #181825 !important;
+    background: var(--vscode-textCodeBlock-background) !important;
     width: 10px;
 }
 
 .monaco-scrollable-element>.split-view-container .editor-container .overflow-guard .overlayWidgets .editor-widget.find-widget.visible > div.monaco-sash.vertical {
-    background-color: #89b4fa !important;
+    background-color: var(--vscode-icon-foreground) !important;
 }
 
 .monaco-workbench .part.editor>.content .sash-container > .monaco-sash.vertical:not(.disabled) {
-    background-color: #181825 !important;
+    background-color: var(--vscode-textCodeBlock-background) !important;
 }
 
 .monaco-workbench .part.titlebar>.titlebar-container>.titlebar-center>.window-title>.command-center .action-item.command-center-center {
@@ -90,7 +89,7 @@
 }
 
 .sidebar ul[role=tablist] .action-item.checked {
-    background-color: #1E1E2E !important; 
+    background-color: var(--vscode-editor-background) !important; 
 }
 
 li.action-item.icon {
@@ -131,7 +130,7 @@ li.action-item.icon.checked, li.action-item.icon:hover {
 }
 
 .terminal-wrapper.active {
-    background: #1E1E2E;
+    background: var(--vscode-editor-background);
 }
 
 div#terminal {
@@ -145,7 +144,7 @@ div#terminal {
 }
 
 .monaco-workbench .part.panel {
-    background:#181825 !important; 
+    background: var(--vscode-textCodeBlock-background) !important; 
     /* margin:0 10px 0 10px !important;  */
     /* height: calc(100%-10px) !important; */
     overflow: hidden;
@@ -156,21 +155,21 @@ div#terminal {
 }
 
 [id='workbench.parts.panel'] .composite.panel .split-view-view.visible {
-    background: #1E1E2E;
+    background: var(--vscode-editor-background);
     border-radius: .75rem;
     overflow: hidden;
 }
 
 [id='workbench.parts.panel'] .composite.panel .split-view-view.visible .monaco-list-rows {
-    background: #1E1E2E;
+    background: var(--vscode-editor-background);
 }
 
 [id='workbench.parts.panel'] .composite.panel .split-view-view.visible .view-line {
-    background: #1E1E2E;
+    background: var(--vscode-editor-background);
 }
 
 [id='workbench.parts.panel'] .composite-bar li.action-item.checked {
-    background: #1E1E2E;
+    background: var(--vscode-editor-background);
     border-radius: 0.5rem 0.5rem 0px 0px;
     position: relative;
 }
@@ -180,7 +179,7 @@ div#terminal {
 }
 
 [id='workbench.parts.panel'] > .composite.title.has-composite-bar:has(.action-item.checked:first-child) {
-    box-shadow: -20px 20px 0 0 #1E1E2E;
+    box-shadow: -20px 20px 0 0 var(--vscode-editor-background);
 }
 
 .quick-input-widget {
@@ -188,9 +187,9 @@ div#terminal {
     left: 20% !important;
     top: 20% !important;
     padding: 5px !important;
-    background-color: #181825 !important;
+    background-color: var(--vscode-textCodeBlock-background) !important;
     border-radius: 10px !important;
-    border: 2px solid #89b4fa !important;
+    border: 2px solid var(--vscode-icon-foreground) !important;
     backdrop-filter: blur(10px); 
 }
 
