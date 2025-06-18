@@ -136,7 +136,7 @@
     "editor.cursorBlinking": "phase",
     "editor.cursorSmoothCaretAnimation": "on",
     "workbench.startupEditor": "none",
-    // "animations.Active": "Indent"
+    "animations.Active": "Indent",
     "animations.Default-Duration": 150,
     "animations.Scrolling": "Fade",
     "window.customTitleBarVisibility": "never",
