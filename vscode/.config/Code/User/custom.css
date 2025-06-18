@@ -50,6 +50,9 @@
 .editor-group-container {
     border-radius: 0.5rem;
     overflow: hidden;
+    width: calc(100% - 16px) !important;
+    height: calc(100% - 16px) !important;
+    margin: 8px !important;
 }
 
 .split-view-view.visible {
@@ -132,7 +135,7 @@ li.action-item.icon.checked, li.action-item.icon:hover {
 }
 
 div#terminal {
-    border-radius: .75rem;
+    border-radius: .5rem;
     overflow: hidden;
 }
 
@@ -145,13 +148,22 @@ div#terminal {
     background: var(--vscode-textCodeBlock-background) !important; 
     overflow: hidden;
     border-radius: 0.5rem !important; 
-    display:flex !important; 
-    flex-direction:column !important; 
+    /* display:flex !important;  */
+    /* flex-direction:column !important;  */
+}
+
+[id='workbench.parts.panel'] {
+    /* width: calc(100% - 16px) !important; */
+    /* height: calc(100% - 8px) !important; */
+    /* margin: 8px !important; */
+    margin-left: 8px !important;
+    margin-right: 8px !important;
+    /* margin-bottom: 8px; */
 }
 
 [id='workbench.parts.panel'] .composite.panel .split-view-view.visible:not(:has( .tabs-container)) {
-    background: var(--vscode-editor-background);
-    border-radius: .75rem;
+    background: var(--vscode-editor-background) !important;
+    border-radius: 0.5rem;
     overflow: hidden;
 }
 
@@ -179,6 +191,7 @@ div#terminal {
 
 [id='terminal'] .integrated-terminal .split-view-container .tabs-container {
     border-left-width: 10px !important;
+    padding-right: 20px;
 }
 
 .quick-input-widget {
