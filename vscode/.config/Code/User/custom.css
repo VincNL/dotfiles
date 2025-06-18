@@ -1,5 +1,3 @@
-/* "(.*)": "(.*)", */
-/* $1 { $2; } */
 
 .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab {
     border-radius: 0.5rem 0.5rem 0 0;
@@ -36,11 +34,11 @@
     box-shadow: 0 6px 0 0 var(--vscode-textCodeBlock-background);
 }
 
-.tabs-and-actions-container > div.editor-actions {
+.title.tabs .tabs-and-actions-container > div.editor-actions {
     opacity: 0;
     transition: all 0.15s;
 }
-.tabs-and-actions-container:hover > div.editor-actions {
+.title.tabs .tabs-and-actions-container:hover > div.editor-actions {
     opacity: 1;
     pointer-events: all;
 }
@@ -145,22 +143,19 @@ div#terminal {
 
 .monaco-workbench .part.panel {
     background: var(--vscode-textCodeBlock-background) !important; 
-    /* margin:0 10px 0 10px !important;  */
-    /* height: calc(100%-10px) !important; */
     overflow: hidden;
     border-radius: 0.5rem !important; 
     display:flex !important; 
     flex-direction:column !important; 
-    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
 }
 
-[id='workbench.parts.panel'] .composite.panel .split-view-view.visible {
+[id='workbench.parts.panel'] .composite.panel .split-view-view.visible:not(:has( .tabs-container)) {
     background: var(--vscode-editor-background);
     border-radius: .75rem;
     overflow: hidden;
 }
 
-[id='workbench.parts.panel'] .composite.panel .split-view-view.visible .monaco-list-rows {
+[id='workbench.parts.panel'] .composite.panel .split-view-view.visible:not(:has( .tabs-container)) .monaco-list-rows {
     background: var(--vscode-editor-background);
 }
 
@@ -180,6 +175,10 @@ div#terminal {
 
 [id='workbench.parts.panel'] > .composite.title.has-composite-bar:has(.action-item.checked:first-child) {
     box-shadow: -20px 20px 0 0 var(--vscode-editor-background);
+}
+
+[id='terminal'] .integrated-terminal .split-view-container .tabs-container {
+    border-left-width: 10px !important;
 }
 
 .quick-input-widget {
@@ -213,19 +212,3 @@ div#terminal {
 .quick-input-widget .quick-input-list .quick-input-list-entry.quick-input-list-separator-border { border-top-width:0px !important; }
 .quick-input-widget.show-file-icons, .editor-widget.find-widget { box-shadow: none !important; }
 .quick-input-list-row div { display: flex !important; align-items: center !important; }
-
-/* monaco-editor .cursor{ background: linear-gradient(to bottom, #00FF00, #00FF00) !important;  color: #161616 !important}
-title-actions{ display: none !important}
-filematch .monaco-icon-label:before, .custom-list-row.results .monaco-list-row .monaco-icon-label:before{ background-position: 0 bottom !important}
-filematch .monaco-count-badge{ padding: 5px 6px 0 6px !important}
-sidebar .title-label{ padding: 0 !important}
-monaco-workbench .monaco-list:not(.element-focused):focus:before{ outline: none !important}
-sidebar{ border: none !important}
-panel .composite.title{ visibility: hidden !important}
-title.show-file-icons .label-container .monaco-icon-label.file-icon{ padding-bottom: 6px !important}
-sidebar .title-label h2{ line-height: 2.8 !important}
-monaco-editor .scroll-decoration{ display: none !important}
-monaco-scrollable-element > .shadow.top{ display: none !important}
-editor-group-watermark{
-    font-size: 15px !important
-} */
