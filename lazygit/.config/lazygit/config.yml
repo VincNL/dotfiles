@@ -4,4 +4,8 @@ git:
   paging:
    colorArg: always
    pager: diff-so-fancy
-notARepository: 'skip'
+gui:
+  nerdFontsVersion: "3"
+  filterMode: fuzzy
+notARepository: skip
+disableStartupPopups: true
