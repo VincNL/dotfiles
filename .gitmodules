@@ -1,0 +1,3 @@
+[submodule "xborders"]
+	path = xborders/.local/share/xborder
+	url = https://github.com/deter0/xborder.git
